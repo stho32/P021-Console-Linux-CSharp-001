@@ -81,6 +81,30 @@
             "rid": "win"
           }
         }
+      },
+      "spamfilter.BL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "MailKit": "3.0.0",
+          "spamfilter.Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/spamfilter.BL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/spamfilter.BL.dll": {}
+        }
+      },
+      "spamfilter.Interfaces/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/spamfilter.Interfaces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/spamfilter.Interfaces.dll": {}
+        }
       }
     }
   },
@@ -316,11 +340,22 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "spamfilter.BL/1.0.0": {
+      "type": "project",
+      "path": "../spamfilter.BL/spamfilter.BL.csproj",
+      "msbuildProject": "../spamfilter.BL/spamfilter.BL.csproj"
+    },
+    "spamfilter.Interfaces/1.0.0": {
+      "type": "project",
+      "path": "../spamfilter.Interfaces/spamfilter.Interfaces.csproj",
+      "msbuildProject": "../spamfilter.Interfaces/spamfilter.Interfaces.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "MailKit >= 3.0.0"
+      "MailKit >= 3.0.0",
+      "spamfilter.BL >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -347,7 +382,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/home/stho32/Projekte/CH021-Console-Linux-CSharp/Source/spamfilter/spamfilter.BL/spamfilter.BL.csproj": {
+              "projectPath": "/home/stho32/Projekte/CH021-Console-Linux-CSharp/Source/spamfilter/spamfilter.BL/spamfilter.BL.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
