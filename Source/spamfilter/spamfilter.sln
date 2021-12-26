@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spamfilter.BL", "spamfilter.BL\spamfilter.BL.csproj", "{2BC35EAB-320C-45FB-9374-D854CA6565A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spamfilter.BL.Tests", "spamfilter.BL.Tests\spamfilter.BL.Tests.csproj", "{5C056149-F883-41E0-8AB5-C2174C0785D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spamfilter.console", "spamfilter.console\spamfilter.console.csproj", "{5B38D534-C4C6-4917-9DE9-BEB84F4A5D9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spamfilter.Interfaces", "spamfilter.Interfaces\spamfilter.Interfaces.csproj", "{DF051930-B53D-477D-8564-1B1AF32CA838}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2BC35EAB-320C-45FB-9374-D854CA6565A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BC35EAB-320C-45FB-9374-D854CA6565A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BC35EAB-320C-45FB-9374-D854CA6565A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BC35EAB-320C-45FB-9374-D854CA6565A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C056149-F883-41E0-8AB5-C2174C0785D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C056149-F883-41E0-8AB5-C2174C0785D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C056149-F883-41E0-8AB5-C2174C0785D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C056149-F883-41E0-8AB5-C2174C0785D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B38D534-C4C6-4917-9DE9-BEB84F4A5D9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B38D534-C4C6-4917-9DE9-BEB84F4A5D9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B38D534-C4C6-4917-9DE9-BEB84F4A5D9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B38D534-C4C6-4917-9DE9-BEB84F4A5D9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF051930-B53D-477D-8564-1B1AF32CA838}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF051930-B53D-477D-8564-1B1AF32CA838}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF051930-B53D-477D-8564-1B1AF32CA838}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF051930-B53D-477D-8564-1B1AF32CA838}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
