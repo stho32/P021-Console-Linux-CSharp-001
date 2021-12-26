@@ -1,3 +1,4 @@
+using MailKit;
 using spamfilter.BL.Entities;
 using spamfilter.BL.SpamDetectors;
 using spamfilter.Interfaces;
@@ -24,7 +25,7 @@ public class ImpersonatorSpamDetectorTests
         var mail = new Email(
             "Amazon",
             "amazon@amazon.de",
-            "123",
+            UniqueId.Invalid,
             "Your orders",
             "Some stuff");
         
@@ -37,7 +38,7 @@ public class ImpersonatorSpamDetectorTests
         var mail = new Email(
             "Amazon",
             "amazon@amazon.com",
-            "123",
+            UniqueId.Invalid,
             "Your orders",
             "Some stuff");
         
@@ -50,7 +51,7 @@ public class ImpersonatorSpamDetectorTests
         var mail = new Email(
             "Amazon",
             "amazon@someimpersonator.com",
-            "123",
+            UniqueId.Invalid, 
             "Your orders",
             "some stuff");
 

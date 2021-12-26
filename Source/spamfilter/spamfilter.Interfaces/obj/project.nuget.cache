@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "plvwFU5WPq3x8oruuUU5VP2WB6tZ0icSjqQB60Tw8Lt8VkGYcdQmkDvCnDEx3NFcb8/hz0A658ugbFBGpTom1g==",
+  "dgSpecHash": "T3UmrIeANXdpy3VsklcGVCy3jyQuGU6J8w2dcbYyjeDBv36hUVGQosG6sMNRp5D1lHG6cO02T0kXUM5KyN13Dw==",
   "success": true,
   "projectFilePath": "/home/stho32/Projekte/CH021-Console-Linux-CSharp/Source/spamfilter/spamfilter.Interfaces/spamfilter.Interfaces.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/stho32/.nuget/packages/mailkit/3.0.0/mailkit.3.0.0.nupkg.sha512",
+    "/home/stho32/.nuget/packages/mimekit/3.0.0/mimekit.3.0.0.nupkg.sha512",
+    "/home/stho32/.nuget/packages/portable.bouncycastle/1.9.0/portable.bouncycastle.1.9.0.nupkg.sha512",
+    "/home/stho32/.nuget/packages/system.formats.asn1/5.0.0/system.formats.asn1.5.0.0.nupkg.sha512",
+    "/home/stho32/.nuget/packages/system.security.cryptography.cng/5.0.0/system.security.cryptography.cng.5.0.0.nupkg.sha512",
+    "/home/stho32/.nuget/packages/system.security.cryptography.pkcs/5.0.0/system.security.cryptography.pkcs.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

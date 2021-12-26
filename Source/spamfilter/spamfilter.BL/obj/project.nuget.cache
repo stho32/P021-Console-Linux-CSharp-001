@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "b2PMGwE6d9Qoteyn0CwSc3xEIWz9Gqv/usX1lmttOjlisbG8kI4+RJPfA4kNt7g8kte1iMny/D59i51rOEprgg==",
+  "dgSpecHash": "p3B6IwSypNgMhD5Dgi3vBiDZhExn/90QDFueYc4eBPd3kmrNIr0ZiWsNT4UKk/kRwpaYTEkcjZ22vmssrIvuFg==",
   "success": true,
   "projectFilePath": "/home/stho32/Projekte/CH021-Console-Linux-CSharp/Source/spamfilter/spamfilter.BL/spamfilter.BL.csproj",
   "expectedPackageFiles": [

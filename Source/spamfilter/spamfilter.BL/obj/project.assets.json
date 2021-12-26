@@ -85,6 +85,9 @@
       "spamfilter.Interfaces/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "MailKit": "3.0.0"
+        },
         "compile": {
           "bin/placeholder/spamfilter.Interfaces.dll": {}
         },

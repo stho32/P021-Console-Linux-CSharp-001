@@ -1,3 +1,5 @@
+using MailKit;
+
 namespace spamfilter.Interfaces;
 
 /// <summary>
@@ -8,7 +10,7 @@ public interface IEmail
     string SenderName { get; }
     string SenderEmailaddress { get; }
     
-    string Id { get; }
+    UniqueId Id { get; }
     string Subject { get; }
     string Body { get; }
 }

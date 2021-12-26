@@ -1,3 +1,4 @@
+using MailKit;
 using spamfilter.BL.Entities;
 using spamfilter.BL.Helpers;
 using spamfilter.BL.SpamDetectors;
@@ -22,7 +23,7 @@ public class InvalidSenderEmailAddressSpamDetectorTests
         var mail = new Email(
             "Amazon",
             "amazon@amazon.de",
-            "123",
+            UniqueId.Invalid,
             "Your orders",
             "");
         
@@ -35,7 +36,7 @@ public class InvalidSenderEmailAddressSpamDetectorTests
         var mail = new Email(
             "Amazon",
             "Not-an-email",
-            "123",
+            UniqueId.Invalid,
             "Your orders",
             "");
         

@@ -16,4 +16,9 @@ public class IsSpamOpinion : IIsSpamOpinion
         DetectorName = detectorName;
         IsSpam = isSpam;
     }
+
+    public override string ToString()
+    {
+        return $"{nameof(Priority)}: {Priority}, {nameof(Reasoning)}: {Reasoning}, {nameof(DetectorName)}: {DetectorName}";
+    }
 }
