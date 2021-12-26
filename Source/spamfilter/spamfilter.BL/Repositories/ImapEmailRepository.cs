@@ -43,7 +43,8 @@ public class ImapEmailRepository : IEmailRepository
                 senderNames,
                 senderAddress,
                 message.MessageId,
-                message.Subject));
+                message.Subject,
+                message.TextBody));
         }
 
         client.Disconnect (true);

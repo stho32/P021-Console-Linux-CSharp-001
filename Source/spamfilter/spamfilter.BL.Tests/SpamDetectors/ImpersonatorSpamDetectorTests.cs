@@ -25,7 +25,8 @@ public class ImpersonatorSpamDetectorTests
             "Amazon",
             "amazon@amazon.de",
             "123",
-            "Your orders");
+            "Your orders",
+            "Some stuff");
         
         Assert.Empty(SpamDetector().GetOpinionsOn(mail));
     }
@@ -37,7 +38,8 @@ public class ImpersonatorSpamDetectorTests
             "Amazon",
             "amazon@amazon.com",
             "123",
-            "Your orders");
+            "Your orders",
+            "Some stuff");
         
         Assert.Empty(SpamDetector().GetOpinionsOn(mail));
     }
@@ -49,7 +51,8 @@ public class ImpersonatorSpamDetectorTests
             "Amazon",
             "amazon@someimpersonator.com",
             "123",
-            "Your orders");
+            "Your orders",
+            "some stuff");
 
         var result = SpamDetector().GetOpinionsOn(mail);
         Assert.Single(result);

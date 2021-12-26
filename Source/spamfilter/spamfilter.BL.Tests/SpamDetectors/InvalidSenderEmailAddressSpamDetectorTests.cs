@@ -23,7 +23,8 @@ public class InvalidSenderEmailAddressSpamDetectorTests
             "Amazon",
             "amazon@amazon.de",
             "123",
-            "Your orders");
+            "Your orders",
+            "");
         
         Assert.Empty(SpamDetector().GetOpinionsOn(mail));
     }
@@ -35,9 +36,9 @@ public class InvalidSenderEmailAddressSpamDetectorTests
             "Amazon",
             "Not-an-email",
             "123",
-            "Your orders");
+            "Your orders",
+            "");
         
         Assert.NotEmpty(SpamDetector().GetOpinionsOn(mail));
     }
-
 }

@@ -10,4 +10,5 @@ public interface IEmail
     
     string Id { get; }
     string Subject { get; }
+    string Body { get; }
 }
