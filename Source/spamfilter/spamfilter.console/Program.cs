@@ -38,7 +38,10 @@ while (true)
         .Where(x => x.IsSpam)
         .Select(x=> x.Email).ToArray();
 
-    spamfilter.Move(spam, "MySpam");
+    if (spam.Length > 0)
+    {
+        spamfilter.Move(spam, "MySpam");        
+    }
     
     logger.Log("Waiting 5 Minutes to restart process...");
     System.Threading.Thread.Sleep(5000*60);
