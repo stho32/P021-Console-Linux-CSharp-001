@@ -7,4 +7,5 @@ namespace spamfilter.Interfaces;
 public interface IEmailRepository
 {
     IEmail[] GetInboxContent();
+    void MoveMailsToFolder(IEmail[] mails, string folderName);
 }

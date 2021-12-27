@@ -357,7 +357,6 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "MailKit >= 3.0.0",
       "spamfilter.BL >= 1.0.0"
     ]
   },
@@ -401,12 +400,6 @@
     "frameworks": {
       "net6.0": {
         "targetAlias": "net6.0",
-        "dependencies": {
-          "MailKit": {
-            "target": "Package",
-            "version": "[3.0.0, )"
-          }
-        },
         "imports": [
           "net461",
           "net462",
