@@ -5,7 +5,7 @@ Eine Challenge aus https://github.com/stho32/Collection-Of-Challenges
 ## Anforderungen
 
 - [X] (A001) Die Anwendung verbindet sich per IMAP mit deinem E-Mail Account
-- [ ] (A002) Die Anwendung implementiert mindestens 3 Regeln für die Blacklist-Identifikation von Spam, z.B.
+- [X] (A002) Die Anwendung implementiert mindestens 3 Regeln für die Blacklist-Identifikation von Spam, z.B.
   - [X] (A003) E-Mails, die keinen Absender oder keine oder keine valide E-Mail-Adresse (mindestens *@*.*) im Absender haben, sind Spam
   - [X] (A004) E-Mails, die "Amazon" in dem Namen des Absenders angeben, aber nicht von der Domain amazon.de oder amazon.com gesendet wurden, sind Spam
   - [X] (A005) E-Mails, die in Betreff oder Inhalt bestimmte Schlüsselwörter beinhalten sind Spam
