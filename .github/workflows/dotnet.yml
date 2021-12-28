@@ -61,12 +61,12 @@ jobs:
 
     - uses: papeloto/action-zip@v1
       with:
-        files: ./Source/${{matrix.OUTPUTDIR}}/
-        dest: ${{matrix.OUTPUTDIR}}.zip
+        files: ./Source/${{ env.SOLUTION_DIR }}/${{matrix.OUTPUTDIR}}/
+        dest: ${{ env.SOLUTION_DIR }}/${{matrix.OUTPUTDIR}}.zip
 
     - name: Release
       uses: softprops/action-gh-release@v1
       if: startsWith(github.ref, 'refs/tags/')
       with:
         files: |
-          ${{matrix.OUTPUTDIR}}.zip
+          ${{ env.SOLUTION_DIR }}/${{matrix.OUTPUTDIR}}.zip
