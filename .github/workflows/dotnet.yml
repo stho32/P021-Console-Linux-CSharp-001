@@ -22,19 +22,19 @@ jobs:
         include:
         - os: macos-latest
           RUNTIMEID: osx-x64
-          OUTPUTDIR: ${{ env.RELEASEPREFIX }}-osx-x64
+          OUTPUTDIR: spamfilter-osx-x64
 
         - os: ubuntu-latest
           RUNTIMEID: linux-x64
-          OUTPUTDIR: ${{ env.RELEASEPREFIX }}-linux-x64
+          OUTPUTDIR: spamfilter-linux-x64
 
         - os: windows-latest
           RUNTIMEID: win-x64
-          OUTPUTDIR: ${{ env.RELEASEPREFIX }}-win-x64
+          OUTPUTDIR: spamfilter-win-x64
         
         - os: linux-arm
           RUNTIMEID: linux-arm
-          OUTPUTDIR: ${{ env.RELEASEPREFIX }}-linux-arm
+          OUTPUTDIR: spamfilter-linux-arm
 
     steps:
     - uses: actions/checkout@v2
