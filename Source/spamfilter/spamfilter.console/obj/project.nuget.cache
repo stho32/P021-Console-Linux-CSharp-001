@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5ogMVwtt/L2jZp83mOVejQt4zwL8+YjT6MR6spIAGqgDsW9jPRKLjpyP5ODe1Ev2+8/EP3zrxpfanrfg+PfY3g==",
+  "dgSpecHash": "bnRooI/pBMY7hqvC4apVhsI98Bzj7DG5kZjZlhrQvo9iLCGfsEMnbKGDdfMdwiXfqjKQRR586QZ5MRL8zhK+8g==",
   "success": true,
-  "projectFilePath": "/home/stho32/Projekte/CH021-Console-Linux-CSharp/Source/spamfilter/spamfilter.console/spamfilter.console.csproj",
+  "projectFilePath": "/home/stho32/Projekte/CH021-Console-Linux-CSharp-001/Source/spamfilter/spamfilter.console/spamfilter.console.csproj",
   "expectedPackageFiles": [
     "/home/stho32/.nuget/packages/mailkit/3.0.0/mailkit.3.0.0.nupkg.sha512",
     "/home/stho32/.nuget/packages/mimekit/3.0.0/mimekit.3.0.0.nupkg.sha512",

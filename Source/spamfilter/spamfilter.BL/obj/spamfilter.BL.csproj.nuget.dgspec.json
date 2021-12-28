@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/stho32/Projekte/CH021-Console-Linux-CSharp/Source/spamfilter/spamfilter.BL/spamfilter.BL.csproj": {}
+    "/home/stho32/Projekte/CH021-Console-Linux-CSharp-001/Source/spamfilter/spamfilter.BL/spamfilter.BL.csproj": {}
   },
   "projects": {
-    "/home/stho32/Projekte/CH021-Console-Linux-CSharp/Source/spamfilter/spamfilter.BL/spamfilter.BL.csproj": {
+    "/home/stho32/Projekte/CH021-Console-Linux-CSharp-001/Source/spamfilter/spamfilter.BL/spamfilter.BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/stho32/Projekte/CH021-Console-Linux-CSharp/Source/spamfilter/spamfilter.BL/spamfilter.BL.csproj",
+        "projectUniqueName": "/home/stho32/Projekte/CH021-Console-Linux-CSharp-001/Source/spamfilter/spamfilter.BL/spamfilter.BL.csproj",
         "projectName": "spamfilter.BL",
-        "projectPath": "/home/stho32/Projekte/CH021-Console-Linux-CSharp/Source/spamfilter/spamfilter.BL/spamfilter.BL.csproj",
+        "projectPath": "/home/stho32/Projekte/CH021-Console-Linux-CSharp-001/Source/spamfilter/spamfilter.BL/spamfilter.BL.csproj",
         "packagesPath": "/home/stho32/.nuget/packages/",
-        "outputPath": "/home/stho32/Projekte/CH021-Console-Linux-CSharp/Source/spamfilter/spamfilter.BL/obj/",
+        "outputPath": "/home/stho32/Projekte/CH021-Console-Linux-CSharp-001/Source/spamfilter/spamfilter.BL/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/stho32/.nuget/NuGet/NuGet.Config"
@@ -26,8 +26,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/home/stho32/Projekte/CH021-Console-Linux-CSharp/Source/spamfilter/spamfilter.Interfaces/spamfilter.Interfaces.csproj": {
-                "projectPath": "/home/stho32/Projekte/CH021-Console-Linux-CSharp/Source/spamfilter/spamfilter.Interfaces/spamfilter.Interfaces.csproj"
+              "/home/stho32/Projekte/CH021-Console-Linux-CSharp-001/Source/spamfilter/spamfilter.Interfaces/spamfilter.Interfaces.csproj": {
+                "projectPath": "/home/stho32/Projekte/CH021-Console-Linux-CSharp-001/Source/spamfilter/spamfilter.Interfaces/spamfilter.Interfaces.csproj"
               }
             }
           }
@@ -66,14 +66,14 @@
         }
       }
     },
-    "/home/stho32/Projekte/CH021-Console-Linux-CSharp/Source/spamfilter/spamfilter.Interfaces/spamfilter.Interfaces.csproj": {
+    "/home/stho32/Projekte/CH021-Console-Linux-CSharp-001/Source/spamfilter/spamfilter.Interfaces/spamfilter.Interfaces.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/stho32/Projekte/CH021-Console-Linux-CSharp/Source/spamfilter/spamfilter.Interfaces/spamfilter.Interfaces.csproj",
+        "projectUniqueName": "/home/stho32/Projekte/CH021-Console-Linux-CSharp-001/Source/spamfilter/spamfilter.Interfaces/spamfilter.Interfaces.csproj",
         "projectName": "spamfilter.Interfaces",
-        "projectPath": "/home/stho32/Projekte/CH021-Console-Linux-CSharp/Source/spamfilter/spamfilter.Interfaces/spamfilter.Interfaces.csproj",
+        "projectPath": "/home/stho32/Projekte/CH021-Console-Linux-CSharp-001/Source/spamfilter/spamfilter.Interfaces/spamfilter.Interfaces.csproj",
         "packagesPath": "/home/stho32/.nuget/packages/",
-        "outputPath": "/home/stho32/Projekte/CH021-Console-Linux-CSharp/Source/spamfilter/spamfilter.Interfaces/obj/",
+        "outputPath": "/home/stho32/Projekte/CH021-Console-Linux-CSharp-001/Source/spamfilter/spamfilter.Interfaces/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/stho32/.nuget/NuGet/NuGet.Config"
