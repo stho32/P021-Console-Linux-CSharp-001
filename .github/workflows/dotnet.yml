@@ -8,7 +8,7 @@ on:
 env:
   DOTNET_VERSION: '6.0.x' # The .NET SDK version to use
   SOLUTION_DIR: 'spamfilter'
-  PROJECT: './spamfilter/spamfilter.console/spamfilter.console.csproj' # the project to publish
+  PROJECT: './spamfilter.console/spamfilter.console.csproj' # the project to publish
   RELEASEPREFIX: 'spamfilter'
 
 jobs:
