@@ -1,0 +1,71 @@
+name: build
+
+on:
+  push:
+  pull_request:
+    branches: [ main ]
+
+env:
+  DOTNET_VERSION: '6.0.x' # The .NET SDK version to use
+  PROJECT: 'spamfilter/spamfilter.console/spamfilter.console.csproj' # the project to publish
+  RELEASEPREFIX: 'spamfilter'
+
+jobs:
+  build:
+
+    name: build-${{matrix.os}}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macOS-latest, linux-arm]
+        include:
+        - os: macos-latest
+          RUNTIMEID: osx-x64
+          OUTPUTDIR: ${{ env.PROJECT }}-osx-x64
+
+        - os: ubuntu-latest
+          RUNTIMEID: linux-x64
+          OUTPUTDIR: ${{ env.PROJECT }}-linux-x64
+
+        - os: windows-latest
+          RUNTIMEID: win-x64
+          OUTPUTDIR: ${{ env.PROJECT }}-win-x64
+        
+        - os: linux-arm
+          RUNTIMEID: linux-arm
+          OUTPUTDIR: ${{ env.PROJECT }}-linux-arm
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: ${{ env.DOTNET_VERSION }}
+
+    - name: Install dependencies
+      run: dotnet restore
+      working-directory: Source
+      
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+      working-directory: Source
+      
+    - name: Test
+      run: dotnet test
+      working-directory: Source
+      
+    - name: Publish
+      run: dotnet publish ${{ env.PROJECT }} -c Release -o ${{matrix.OUTPUTDIR}} -p:PublishReadyToRun=true --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:UseAppHost=true -r ${{matrix.RUNTIMEID}}
+      working-directory: Source
+
+    - uses: papeloto/action-zip@v1
+      with:
+        files: ./Source/${{matrix.OUTPUTDIR}}/
+        dest: ${{matrix.OUTPUTDIR}}.zip
+
+    - name: Release
+      uses: softprops/action-gh-release@v1
+      if: startsWith(github.ref, 'refs/tags/')
+      with:
+        files: |
+          ${{matrix.OUTPUTDIR}}.zip
