@@ -2,6 +2,8 @@
 
 Eine Challenge aus https://github.com/stho32/Collection-Of-Challenges
 
+[![build](https://github.com/stho32/CH021-Console-Linux-CSharp-001/actions/workflows/dotnet.yml/badge.svg)](https://github.com/stho32/CH021-Console-Linux-CSharp-001/actions/workflows/dotnet.yml)
+
 ## Anforderungen
 
 - [X] (A001) Die Anwendung verbindet sich per IMAP mit deinem E-Mail Account
@@ -17,4 +19,4 @@ Eine Challenge aus https://github.com/stho32/Collection-Of-Challenges
 ## Zusatzanforderungen
 
 - [ ] (Z001) Das Repository sollte eine Dokumentation und/ oder ein build-Skript beinhalten, das angibt, wo der Code zu übersetzen ist
-- [ ] (Z002) Das Repository kann/möchte wenn möglich einen github-Workflow beinhalten, der den Code übersetzt und ein neues Release bereitstellt.
+- [X] (Z002) Das Repository kann/möchte wenn möglich einen github-Workflow beinhalten, der den Code übersetzt und ein neues Release bereitstellt.
