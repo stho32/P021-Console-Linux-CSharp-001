@@ -1,16 +1,16 @@
 using MailKit;
+using spamfilter.BL.Detectors;
 using spamfilter.BL.Entities;
-using spamfilter.BL.SpamDetectors;
 using spamfilter.Interfaces;
 using Xunit;
 
-namespace spamfilter.BL.Tests.SpamDetectors;
+namespace spamfilter.BL.Tests.Detectors;
 
 public class ImpersonatorSpamDetectorTests
 {
-    private ISpamDetector SpamDetector()
+    private IDetector SpamDetector()
     {
-        var detector = new ImpersonatorSpamDetector("Amazon", new string[]
+        var detector = new ImpersonatorDetector("Amazon", new string[]
         {
             "amazon.com",
             "amazon.de"

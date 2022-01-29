@@ -2,18 +2,18 @@ using System.Text.RegularExpressions;
 using spamfilter.BL.Entities;
 using spamfilter.Interfaces;
 
-namespace spamfilter.BL.SpamDetectors;
+namespace spamfilter.BL.Detectors;
 
-public class DomainExpressionBasedSpamDetector : ISpamDetector
+public class DomainExpressionBasedDetector : IDetector
 {
     private readonly string _domainRegex;
 
-    public DomainExpressionBasedSpamDetector(string domainRegex)
+    public DomainExpressionBasedDetector(string domainRegex)
     {
         _domainRegex = domainRegex;
     }
     
-    public IIsSpamOpinion[] GetOpinionsOn(IEmail email)
+    public IIsMatchOpinion[] GetOpinionsOn(IEmail email)
     {
         if (email.SenderEmailaddress.Contains("@"))
         {
@@ -22,16 +22,16 @@ public class DomainExpressionBasedSpamDetector : ISpamDetector
             {
                 if (Regex.IsMatch(split[1], _domainRegex))
                 {
-                    return new IIsSpamOpinion[] {
-                        new IsSpamOpinion(100, 
+                    return new IIsMatchOpinion[] {
+                        new IsMatchOpinion(100, 
                             "Matched Regex", 
-                            nameof(DomainExpressionBasedSpamDetector),
+                            nameof(DomainExpressionBasedDetector),
                             true)
                     };
                 }
             }
         }
 
-        return Array.Empty<IIsSpamOpinion>();
+        return Array.Empty<IIsMatchOpinion>();
     }
 }

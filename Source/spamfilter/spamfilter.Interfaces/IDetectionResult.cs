@@ -1,8 +1,8 @@
 namespace spamfilter.Interfaces;
 
-public interface ISpamDetectionResult
+public interface IDetectionResult
 {
     IEmail Email { get; }
-    IIsSpamOpinion[] Opinions { get; }
+    IIsMatchOpinion[] Opinions { get; }
     bool IsSpam { get; }
 }

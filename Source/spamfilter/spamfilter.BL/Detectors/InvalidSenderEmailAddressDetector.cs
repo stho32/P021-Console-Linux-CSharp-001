@@ -2,36 +2,36 @@ using spamfilter.BL.Entities;
 using spamfilter.Interfaces;
 using spamfilter.Interfaces.Helpers;
 
-namespace spamfilter.BL.SpamDetectors;
+namespace spamfilter.BL.Detectors;
 
 /// <summary>
 /// If the sender has not a valid email address, e.g. if there is nothing given or
 /// if the domain is missing, we want to classify this as spam. 
 /// </summary>
-public class InvalidSenderEmailAddressSpamDetector : ISpamDetector
+public class InvalidSenderEmailAddressDetector : IDetector
 {
     private readonly IEmailValidator _emailValidator;
 
-    public InvalidSenderEmailAddressSpamDetector(IEmailValidator emailValidator)
+    public InvalidSenderEmailAddressDetector(IEmailValidator emailValidator)
     {
         _emailValidator = emailValidator;
     }
     
-    public IIsSpamOpinion[] GetOpinionsOn(IEmail email)
+    public IIsMatchOpinion[] GetOpinionsOn(IEmail email)
     {
         if (!_emailValidator.IsValidEmail(email.SenderEmailaddress))
         {
-            return new IIsSpamOpinion[]
+            return new IIsMatchOpinion[]
             {
-                new IsSpamOpinion(
+                new IsMatchOpinion(
                     100,
                     $"The senders email address is not a valid email address ({email.SenderEmailaddress})",
-                    nameof(InvalidSenderEmailAddressSpamDetector),
+                    nameof(InvalidSenderEmailAddressDetector),
                     true
                 )
             };
         }
 
-        return Array.Empty<IIsSpamOpinion>();
+        return Array.Empty<IIsMatchOpinion>();
     }
 }

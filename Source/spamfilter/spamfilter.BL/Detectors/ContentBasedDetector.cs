@@ -2,16 +2,16 @@ using spamfilter.BL.Entities;
 using spamfilter.Interfaces;
 using spamfilter.Interfaces.Helpers;
 
-namespace spamfilter.BL.SpamDetectors;
+namespace spamfilter.BL.Detectors;
 
-public class ContentBasedSpamDetector : ISpamDetector
+public class ContentBasedDetector : IDetector
 {
     private readonly ITextSearchHelper _textSearchHelper;
     private readonly bool _checkSubject;
     private readonly bool _checkBody;
     private readonly string[] _words;
 
-    public ContentBasedSpamDetector(ITextSearchHelper textSearchHelper, string[] words, 
+    public ContentBasedDetector(ITextSearchHelper textSearchHelper, string[] words, 
         bool checkSubject, bool checkBody)
     {
         _textSearchHelper = textSearchHelper;
@@ -20,17 +20,17 @@ public class ContentBasedSpamDetector : ISpamDetector
         _words = words.Select(x => x.ToLower()).ToArray();
     }
     
-    public IIsSpamOpinion[] GetOpinionsOn(IEmail email)
+    public IIsMatchOpinion[] GetOpinionsOn(IEmail email)
     {
         if (_checkSubject)
         {
             if (_textSearchHelper.ContainsOneOfTheseWords(email.Subject, _words))
             {
-                return new IIsSpamOpinion[]
+                return new IIsMatchOpinion[]
                 {
-                    new IsSpamOpinion(100,
+                    new IsMatchOpinion(100,
                         $"The emails subject {email.Subject} contains suspicious words",
-                        nameof(ContentBasedSpamDetector),
+                        nameof(ContentBasedDetector),
                         true)
                 };
             }
@@ -40,16 +40,16 @@ public class ContentBasedSpamDetector : ISpamDetector
         {
             if (_textSearchHelper.ContainsOneOfTheseWords(email.Body, _words))
             {
-                return new IIsSpamOpinion[]
+                return new IIsMatchOpinion[]
                 {
-                    new IsSpamOpinion(100, 
+                    new IsMatchOpinion(100, 
                         $"The emails body ({email.Subject}) contains suspicious words", 
-                        nameof(ContentBasedSpamDetector),
+                        nameof(ContentBasedDetector),
                         true)
                 };
             }
         }
 
-        return Array.Empty<IIsSpamOpinion>();
+        return Array.Empty<IIsMatchOpinion>();
     }
 }

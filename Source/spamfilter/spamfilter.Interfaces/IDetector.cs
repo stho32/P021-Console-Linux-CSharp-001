@@ -3,7 +3,7 @@ namespace spamfilter.Interfaces;
 /// <summary>
 /// A spam-detector collects several opinions about an email
 /// </summary>
-public interface ISpamDetector
+public interface IDetector
 {
-    IIsSpamOpinion[] GetOpinionsOn(IEmail email);
+    IIsMatchOpinion[] GetOpinionsOn(IEmail email);
 }

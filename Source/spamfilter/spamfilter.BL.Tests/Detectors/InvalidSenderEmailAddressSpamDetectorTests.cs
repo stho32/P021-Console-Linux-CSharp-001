@@ -1,17 +1,17 @@
 using MailKit;
+using spamfilter.BL.Detectors;
 using spamfilter.BL.Entities;
 using spamfilter.BL.Helpers;
-using spamfilter.BL.SpamDetectors;
 using spamfilter.Interfaces;
 using Xunit;
 
-namespace spamfilter.BL.Tests.SpamDetectors;
+namespace spamfilter.BL.Tests.Detectors;
 
 public class InvalidSenderEmailAddressSpamDetectorTests
 {
-    private ISpamDetector SpamDetector()
+    private IDetector SpamDetector()
     {
-        var detector = new InvalidSenderEmailAddressSpamDetector(
+        var detector = new InvalidSenderEmailAddressDetector(
             new EmailValidator());
 
         return detector;

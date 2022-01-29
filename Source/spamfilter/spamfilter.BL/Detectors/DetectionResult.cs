@@ -1,23 +1,23 @@
 using spamfilter.Interfaces;
 
-namespace spamfilter.BL.SpamDetectors;
+namespace spamfilter.BL.Detectors;
 
-public class SpamDetectionResult : ISpamDetectionResult
+public class DetectionResult : IDetectionResult
 {
-    public SpamDetectionResult(IEmail email, IIsSpamOpinion[] opinions)
+    public DetectionResult(IEmail email, IIsMatchOpinion[] opinions)
     {
         Email = email;
         Opinions = opinions;
     }
 
     public IEmail Email { get; }
-    public IIsSpamOpinion[] Opinions { get; }
+    public IIsMatchOpinion[] Opinions { get; }
 
     public bool IsSpam
     {
         get
         {
-            var opinionsSorted = new List<IIsSpamOpinion>(Opinions);
+            var opinionsSorted = new List<IIsMatchOpinion>(Opinions);
             opinionsSorted.Sort((x, y) => -1 * x.Priority.CompareTo(y.Priority));
 
             if (opinionsSorted.Count > 0)

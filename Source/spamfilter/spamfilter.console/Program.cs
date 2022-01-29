@@ -1,9 +1,9 @@
 ﻿using spamfilter.BL;
 using spamfilter.BL.Actions;
+using spamfilter.BL.Detectors;
 using spamfilter.BL.Helpers;
 using spamfilter.BL.Logging;
 using spamfilter.BL.Repositories;
-using spamfilter.BL.SpamDetectors;
 using spamfilter.Interfaces;
 
 var environment = new EnvironmentFactory();
@@ -20,15 +20,15 @@ while (true)
     logger.Log("Spamfilter going to work...");
 
     var spamRule = new Rule(
-        new ISpamDetector[]
+        new IDetector[]
         {
-            new InvalidSenderEmailAddressSpamDetector(new EmailValidator()),
-            new DomainExpressionBasedSpamDetector("ip-.+"),
-            new ImpersonatorSpamDetector("Amazon", new string[] { "amazon.de", "amazon.com" }),
-            new EmailEndsWithBasedSpamDetector(".ru"),
-            new EmailEndsWithBasedSpamDetector(".br"),
-            new EmailEndsWithBasedSpamDetector("@next-traffic-news.de"),
-            new EmailEndsWithBasedSpamDetector("no-reply@nebenan.de")
+            new InvalidSenderEmailAddressDetector(new EmailValidator()),
+            new DomainExpressionBasedDetector("ip-.+"),
+            new ImpersonatorDetector("Amazon", new string[] { "amazon.de", "amazon.com" }),
+            new EmailEndsWithBasedDetector(".ru"),
+            new EmailEndsWithBasedDetector(".br"),
+            new EmailEndsWithBasedDetector("@next-traffic-news.de"),
+            new EmailEndsWithBasedDetector("no-reply@nebenan.de")
         }, 
         emailRepository,
         environment,

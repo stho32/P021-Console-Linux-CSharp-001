@@ -1,36 +1,36 @@
 using spamfilter.BL.Entities;
 using spamfilter.Interfaces;
 
-namespace spamfilter.BL.SpamDetectors;
+namespace spamfilter.BL.Detectors;
 
-public class ImpersonatorSpamDetector : ISpamDetector
+public class ImpersonatorDetector : IDetector
 {
     private readonly string _namePart;
     private readonly string[] _validSenderDomains;
 
-    public ImpersonatorSpamDetector(string namePart, string[] validSenderDomains)
+    public ImpersonatorDetector(string namePart, string[] validSenderDomains)
     {
         _namePart = namePart.ToLower();
         _validSenderDomains = validSenderDomains.Select(x=>x.ToLower()).ToArray();
     }
     
-    public IIsSpamOpinion[] GetOpinionsOn(IEmail email)
+    public IIsMatchOpinion[] GetOpinionsOn(IEmail email)
     {
         if (email.SenderName.ToLower().Contains(_namePart))
         {
             if (!EndsWithOneOfThose(email.SenderEmailaddress.ToLower(), _validSenderDomains))
             {
-                return new IIsSpamOpinion[]
+                return new IIsMatchOpinion[]
                 {
-                    new IsSpamOpinion(100,
+                    new IsMatchOpinion(100,
                         $"The message is sent from {email.SenderEmailaddress} but tries to trick us into thinking it would be from {string.Join(",", _validSenderDomains)}.",
-                        nameof(ImpersonatorSpamDetector),
+                        nameof(ImpersonatorDetector),
                         true)
                 };
             }
         }
 
-        return Array.Empty<IIsSpamOpinion>();
+        return Array.Empty<IIsMatchOpinion>();
     }
 
     private bool EndsWithOneOfThose(string emailaddress, string[] possibleValidEndings)

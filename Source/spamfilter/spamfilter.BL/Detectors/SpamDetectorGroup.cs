@@ -1,30 +1,30 @@
 using spamfilter.Interfaces;
 using spamfilter.Interfaces.Environment;
 
-namespace spamfilter.BL.SpamDetectors;
+namespace spamfilter.BL.Detectors;
 
 public class SpamDetectorGroup
 {
-    private readonly ISpamDetector[] _spamDetectors;
+    private readonly IDetector[] _spamDetectors;
     private readonly IEnvironmentFactory _environmentFactory;
 
-    public SpamDetectorGroup(ISpamDetector[] spamDetectors, IEnvironmentFactory environmentFactory)
+    public SpamDetectorGroup(IDetector[] spamDetectors, IEnvironmentFactory environmentFactory)
     {
         _spamDetectors = spamDetectors;
         _environmentFactory = environmentFactory;
     }
 
-    public ISpamDetectionResult[] Filter(IEmail[] emails)
+    public IDetectionResult[] Filter(IEmail[] emails)
     {
         var logger = _environmentFactory.GetLogger(nameof(SpamDetectorGroup));
 
         try
         {
-            var results = new List<ISpamDetectionResult>();
+            var results = new List<IDetectionResult>();
 
             foreach (var email in emails)
             {
-                var spamDetectionResult = new SpamDetectionResult(email, GetOpinionsOn(email));
+                var spamDetectionResult = new DetectionResult(email, GetOpinionsOn(email));
                 if (spamDetectionResult.IsSpam)
                 {
                     logger.Log(
@@ -45,12 +45,12 @@ public class SpamDetectorGroup
             logger.Log(e.ToString());
         }
 
-        return Array.Empty<ISpamDetectionResult>();
+        return Array.Empty<IDetectionResult>();
     }
 
-    private IIsSpamOpinion[] GetOpinionsOn(IEmail email)
+    private IIsMatchOpinion[] GetOpinionsOn(IEmail email)
     {
-        var results = new List<IIsSpamOpinion>();
+        var results = new List<IIsMatchOpinion>();
         
         foreach (var detector in _spamDetectors)
         {

@@ -1,4 +1,4 @@
-using spamfilter.BL.SpamDetectors;
+using spamfilter.BL.Detectors;
 using spamfilter.Interfaces;
 using spamfilter.Interfaces.Environment;
 
@@ -11,7 +11,7 @@ public class Rule : IRule
     private readonly SpamDetectorGroup _spamDetectors;
 
     public Rule(
-        ISpamDetector[] spamDetectors,
+        IDetector[] spamDetectors,
         IEmailRepository emailRepository,
         IEnvironmentFactory environmentFactory,
         IActionFactory actionFactory)
@@ -21,7 +21,7 @@ public class Rule : IRule
         _spamDetectors = new SpamDetectorGroup(spamDetectors, environmentFactory);
     }
 
-    private ISpamDetectionResult[] DetectInInbox()
+    private IDetectionResult[] DetectInInbox()
     {
         var mails = _emailRepository.GetInboxContent();
 
