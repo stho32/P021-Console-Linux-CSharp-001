@@ -8,5 +8,5 @@ public interface IIsMatchOpinion
     int Priority { get; }
     string Reasoning { get; }
     string DetectorName { get; }
-    bool IsSpam { get; }
+    bool IsIncluded { get; }
 }

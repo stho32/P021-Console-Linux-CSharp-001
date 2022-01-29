@@ -57,6 +57,6 @@ public class ImpersonatorSpamDetectorTests
 
         var result = SpamDetector().GetOpinionsOn(mail);
         Assert.Single(result);
-        Assert.True(result[0].IsSpam);
+        Assert.True(result[0].IsIncluded);
     }
 }

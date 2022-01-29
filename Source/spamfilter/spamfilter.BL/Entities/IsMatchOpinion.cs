@@ -7,14 +7,14 @@ public class IsMatchOpinion : IIsMatchOpinion
     public int Priority { get; }
     public string Reasoning { get; }
     public string DetectorName { get; }
-    public bool IsSpam { get; }
+    public bool IsIncluded { get; }
 
-    public IsMatchOpinion(int priority, string reasoning, string detectorName, bool isSpam)
+    public IsMatchOpinion(int priority, string reasoning, string detectorName, bool isIncluded)
     {
         Priority = priority;
         Reasoning = reasoning;
         DetectorName = detectorName;
-        IsSpam = isSpam;
+        IsIncluded = isIncluded;
     }
 
     public override string ToString()

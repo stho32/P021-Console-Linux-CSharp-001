@@ -22,7 +22,7 @@ public class DetectionResult : IDetectionResult
 
             if (opinionsSorted.Count > 0)
             {
-                return opinionsSorted[0].IsSpam;
+                return opinionsSorted[0].IsIncluded;
             }
 
             return false;
