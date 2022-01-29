@@ -5,14 +5,14 @@ https://github.com/stho32/Collection-Of-Challenges/blob/master/Common-Requiremen
 
 ## Requirements
 
-- [ ] (R001) The app connects to your e-mail account using imap. (Use an interface for the connection method, so you can change or extend the ways the connection works later.)
+- [X] (R001) The app connects to your e-mail account using imap. (Use an interface for the connection method, so you can change or extend the ways the connection works later.)
 
 - [ ] (R002) The following base rules exist and can return "match" or "does not match" as results
-  - [ ] (R007) check if the sender has a valid e-mail address (checking it lexically is enough)
-  - [ ] (R008) check if the senders email contains a specific text
-  - [ ] (R009) check if the subject contains a specific text
-  - [ ] (R010) check if the email body contains a specific text
-  - [ ] (R011) check if the email subject or body contain a specific text
+  - [X] (R007) check if the sender has a valid e-mail address (checking it lexically is enough)
+  - [X] (R008) check if the senders email contains a specific text
+  - [X] (R009) check if the subject contains a specific text
+  - [X] (R010) check if the email body contains a specific text
+  - [X] (R011) check if the email subject or body contain a specific text
   - [ ] (R012) check the length of the content in text representation in bytes
   - [ ] (R013) check the length of the content in html representation in bytes
   - [ ] (R014) check the age of an email (days since receiving it)
