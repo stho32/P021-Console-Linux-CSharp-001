@@ -5,5 +5,5 @@ namespace spamfilter.Interfaces;
 /// </summary>
 public interface IAction
 {
-    void Execute();
+    void Execute(IEmailRepository emailRepository);
 }

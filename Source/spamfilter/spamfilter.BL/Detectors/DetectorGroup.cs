@@ -3,12 +3,12 @@ using spamfilter.Interfaces.Environment;
 
 namespace spamfilter.BL.Detectors;
 
-public class SpamDetectorGroup
+public class DetectorGroup
 {
     private readonly IDetector[] _spamDetectors;
     private readonly IEnvironmentFactory _environmentFactory;
 
-    public SpamDetectorGroup(IDetector[] spamDetectors, IEnvironmentFactory environmentFactory)
+    public DetectorGroup(IDetector[] spamDetectors, IEnvironmentFactory environmentFactory)
     {
         _spamDetectors = spamDetectors;
         _environmentFactory = environmentFactory;
@@ -16,7 +16,7 @@ public class SpamDetectorGroup
 
     public IDetectionResult[] Filter(IEmail[] emails)
     {
-        var logger = _environmentFactory.GetLogger(nameof(SpamDetectorGroup));
+        var logger = _environmentFactory.GetLogger(nameof(DetectorGroup));
 
         try
         {

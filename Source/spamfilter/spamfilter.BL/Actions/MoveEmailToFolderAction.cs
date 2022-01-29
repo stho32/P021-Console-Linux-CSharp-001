@@ -5,19 +5,17 @@ namespace spamfilter.BL.Actions;
 public class MoveEmailToFolderAction : IAction
 {
     private readonly IEmail _email;
-    private readonly IEmailRepository _emailRepository;
     private readonly string _targetFolder;
 
-    public MoveEmailToFolderAction(IEmail email, IEmailRepository emailRepository, 
+    public MoveEmailToFolderAction(IEmail email, 
         string targetFolder)
     {
         _email = email;
-        _emailRepository = emailRepository;
         _targetFolder = targetFolder;
     }
 
-    public void Execute()
+    public void Execute(IEmailRepository emailRepository)
     {
-        _emailRepository.MoveMailsToFolder(new []{ _email }, _targetFolder);
+        emailRepository.MoveMailsToFolder(new []{ _email }, _targetFolder);
     }
 }

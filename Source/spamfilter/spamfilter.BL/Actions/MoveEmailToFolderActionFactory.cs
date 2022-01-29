@@ -4,6 +4,7 @@ namespace spamfilter.BL.Actions;
 
 public class MoveEmailToFolderActionFactory : IActionFactory
 {
+    private readonly IEmailRepository _emailRepository;
     private readonly string _targetFolder;
 
     public MoveEmailToFolderActionFactory(string targetFolder)
@@ -11,8 +12,8 @@ public class MoveEmailToFolderActionFactory : IActionFactory
         _targetFolder = targetFolder;
     }
     
-    public IAction CreateFromEmail(IEmail email, IEmailRepository emailRepository)
+    public IAction CreateFromEmail(IEmail email)
     {
-        return new MoveEmailToFolderAction(email, emailRepository, _targetFolder);
+        return new MoveEmailToFolderAction(email, _targetFolder);
     }
 }
