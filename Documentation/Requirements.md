@@ -30,7 +30,7 @@ https://github.com/stho32/Collection-Of-Challenges/blob/master/Common-Requiremen
   - [ ] (R024) is bigger than
 
 - [ ] (R025) Checks can be combined using and and or. 
-- [ ] (R026) We call 1..n checks in combination a "rule".
+- [X] (R026) We call 1..n checks in combination a "rule".
 
 - [ ] (R027) We call a set of 0..n rules a formula.
 - [ ] (R028) The rules within a formula are executed in a given order. As soon as one rule matches the formula is "matched"
