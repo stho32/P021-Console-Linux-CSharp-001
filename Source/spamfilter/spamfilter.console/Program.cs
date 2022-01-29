@@ -1,4 +1,5 @@
 ﻿using spamfilter.BL;
+using spamfilter.BL.Actions;
 using spamfilter.BL.Helpers;
 using spamfilter.BL.Logging;
 using spamfilter.BL.Repositories;
@@ -18,7 +19,7 @@ while (true)
 {
     logger.Log("Spamfilter going to work...");
 
-    var spamfilter = new Spamfilter(
+    var spamRule = new Rule(
         new ISpamDetector[]
         {
             new InvalidSenderEmailAddressSpamDetector(new EmailValidator()),
@@ -30,17 +31,15 @@ while (true)
             new EmailEndsWithBasedSpamDetector("no-reply@nebenan.de")
         }, 
         emailRepository,
-        environment
+        environment,
+        new MoveEmailToFolderActionFactory("MySpam")
         );
 
-    var results = spamfilter.DetectSpamInInbox();
-    var spam = results
-        .Where(x => x.IsSpam)
-        .Select(x=> x.Email).ToArray();
+    var actions = spamRule.Execute();
 
-    if (spam.Length > 0)
+    foreach (var action in actions)
     {
-        spamfilter.Move(spam, "MySpam");        
+        action.Execute();
     }
     
     logger.Log("Waiting 5 Minutes to restart process...");

@@ -22,7 +22,7 @@ https://github.com/stho32/Collection-Of-Challenges/blob/master/Common-Requiremen
   - [ ] (R017) matches a given regular expression
   - [ ] (R018) starts with
   - [ ] (R019) ends with
-  - [ ] (R020) contains
+  - [X] (R020) contains
   - [ ] (R021) equals
 
 - [ ] (R022) the following operators are allowed/supported for number based checks

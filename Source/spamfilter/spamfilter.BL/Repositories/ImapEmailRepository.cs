@@ -40,7 +40,7 @@ public class ImapEmailRepository : IEmailRepository
             var inbox = client.Inbox;
             inbox.Open (FolderAccess.ReadOnly);
         
-            IMailFolder matchFolder = null;
+            IMailFolder? matchFolder = null;
             foreach (var folder in client.Inbox.GetSubfolders (false)) {
                 if (folder.Name == folderName)
                 {
