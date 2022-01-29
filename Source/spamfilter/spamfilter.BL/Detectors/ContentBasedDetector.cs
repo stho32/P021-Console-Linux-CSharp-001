@@ -22,17 +22,18 @@ public class ContentBasedDetector : IDetector
     
     public IIsMatchOpinion[] GetOpinionsOn(IEmail email)
     {
+        var result = new List<IIsMatchOpinion>();
+        
         if (_checkSubject)
         {
             if (_textSearchHelper.ContainsOneOfTheseWords(email.Subject, _words))
             {
-                return new IIsMatchOpinion[]
-                {
+                result.Add(
                     new IsMatchOpinion(100,
                         $"The emails subject {email.Subject} contains suspicious words",
                         nameof(ContentBasedDetector),
                         true)
-                };
+                );
             }
         }
 
@@ -40,16 +41,15 @@ public class ContentBasedDetector : IDetector
         {
             if (_textSearchHelper.ContainsOneOfTheseWords(email.Body, _words))
             {
-                return new IIsMatchOpinion[]
-                {
-                    new IsMatchOpinion(100, 
-                        $"The emails body ({email.Subject}) contains suspicious words", 
+                result.Add(
+                    new IsMatchOpinion(100,
+                        $"The emails body ({email.Subject}) contains suspicious words",
                         nameof(ContentBasedDetector),
                         true)
-                };
+                );
             }
         }
 
-        return Array.Empty<IIsMatchOpinion>();
+        return result.ToArray();
     }
 }
