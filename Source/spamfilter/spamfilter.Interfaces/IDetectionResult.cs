@@ -4,5 +4,5 @@ public interface IDetectionResult
 {
     IEmail Email { get; }
     IIsMatchOpinion[] Opinions { get; }
-    bool IsSpam { get; }
+    bool IsIncluded { get; }
 }

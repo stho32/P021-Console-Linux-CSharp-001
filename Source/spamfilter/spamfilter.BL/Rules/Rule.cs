@@ -29,7 +29,7 @@ public class Rule : IRule
     {
         var possiblyMatches = DetectInInbox(emails);
         var matches = possiblyMatches
-            .Where(x => x.IsSpam)
+            .Where(x => x.IsIncluded)
             .Select(x=> x.Email).ToArray();
 
         var result = new List<IAction>();

@@ -13,7 +13,7 @@ public class DetectionResult : IDetectionResult
     public IEmail Email { get; }
     public IIsMatchOpinion[] Opinions { get; }
 
-    public bool IsSpam
+    public bool IsIncluded
     {
         get
         {

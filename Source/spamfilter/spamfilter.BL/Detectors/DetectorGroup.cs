@@ -25,7 +25,7 @@ public class DetectorGroup
             foreach (var email in emails)
             {
                 var spamDetectionResult = new DetectionResult(email, GetOpinionsOn(email));
-                if (spamDetectionResult.IsSpam)
+                if (spamDetectionResult.IsIncluded)
                 {
                     logger.Log(
                         $"{spamDetectionResult.Email.Subject} from {spamDetectionResult.Email.SenderEmailaddress} is spam");
