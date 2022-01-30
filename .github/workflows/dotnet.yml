@@ -49,6 +49,15 @@ jobs:
       
     - name: Test + Cover
       run: ./update-coverage.sh
+
+    - name: upload code coverage to codecov
+    - uses: codecov/codecov-action@v2
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+        files: Source/spamfilter/spamfilter.BL.Tests/coverage.xml # optional
+        flags: unittests # optional
+        name: codecov-umbrella # optional
+        verbose: true # optional (default = false)
       
     - name: Publish
       run: dotnet publish ${{ env.PROJECT }} -c Release -o ${{matrix.OUTPUTDIR}} -p:PublishReadyToRun=true --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:UseAppHost=true -r ${{matrix.RUNTIMEID}}
