@@ -24,18 +24,18 @@ public class DetectorGroup
 
             foreach (var email in emails)
             {
-                var spamDetectionResult = new DetectionResult(email, GetOpinionsOn(email));
-                if (spamDetectionResult.IsIncluded)
+                var detectionResult = new DetectionResult(email, GetOpinionsOn(email));
+                if (detectionResult.IsIncluded)
                 {
                     logger.Log(
-                        $"{spamDetectionResult.Email.Subject} from {spamDetectionResult.Email.SenderEmailaddress} is spam");
-                    foreach (var opinion in spamDetectionResult.Opinions)
+                        $"{detectionResult.Email.Subject} from {detectionResult.Email.SenderEmailaddress} is spam");
+                    foreach (var opinion in detectionResult.Opinions)
                     {
                         logger.Log($"  {opinion.DetectorName}: {opinion.Reasoning}");
                     }
                 }
 
-                results.Add(spamDetectionResult);
+                results.Add(detectionResult);
             }
 
             return results.ToArray();
