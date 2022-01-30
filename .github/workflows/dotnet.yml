@@ -51,7 +51,7 @@ jobs:
       run: ./update-coverage.sh
 
     - name: upload code coverage to codecov
-    - uses: codecov/codecov-action@v2
+      uses: codecov/codecov-action@v2
       with:
         token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
         files: Source/spamfilter/spamfilter.BL.Tests/coverage.xml # optional
