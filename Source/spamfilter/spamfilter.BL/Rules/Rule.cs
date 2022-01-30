@@ -18,16 +18,9 @@ public class Rule : IRule
         _detectors = new DetectorGroup(detectors, environmentFactory);
     }
 
-    private IDetectionResult[] DetectInInbox(IEmail[] mails)
-    {
-        var result = _detectors.Filter(mails);
-
-        return result;
-    }
-
     public IAction[] Execute(IEmail[] emails)
     {
-        var possiblyMatches = DetectInInbox(emails);
+        var possiblyMatches = _detectors.Filter(emails);
         var matches = possiblyMatches
             .Where(x => x.IsIncluded)
             .Select(x=> x.Email).ToArray();
