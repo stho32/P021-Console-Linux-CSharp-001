@@ -1,7 +1,8 @@
-﻿using spamfilter.BL.ExtensionMethods;
-using spamfilter.BL.Logging;
-using spamfilter.BL.Repositories;
+﻿using spamfilter.BL.Environment;
+using spamfilter.BL.ExtensionMethods;
 using spamfilter.BL.Rules;
+using spamfilter.Infrastructure.Environment;
+using spamfilter.Infrastructure.Repositories;
 
 var environment = new EnvironmentFactory(
     new ConsoleLogger("Main"),

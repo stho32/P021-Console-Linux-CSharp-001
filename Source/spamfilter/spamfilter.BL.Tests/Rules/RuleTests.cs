@@ -1,6 +1,6 @@
 using MailKit;
 using spamfilter.BL.Entities;
-using spamfilter.BL.Logging;
+using spamfilter.BL.Environment;
 using spamfilter.BL.Rules;
 using spamfilter.BL.Tests.Detectors;
 using spamfilter.BL.Tests.Mocks;

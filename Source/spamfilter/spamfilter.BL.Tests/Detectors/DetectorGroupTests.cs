@@ -1,7 +1,7 @@
 using MailKit;
 using spamfilter.BL.Detectors;
 using spamfilter.BL.Entities;
-using spamfilter.BL.Logging;
+using spamfilter.BL.Environment;
 using spamfilter.Interfaces;
 using Xunit;
 

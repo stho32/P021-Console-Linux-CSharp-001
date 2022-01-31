@@ -1,6 +1,6 @@
 using spamfilter.Interfaces.Environment;
 
-namespace spamfilter.BL.Logging;
+namespace spamfilter.Infrastructure.Environment;
 
 public class ConsoleConfiguration : IConfiguration
 {

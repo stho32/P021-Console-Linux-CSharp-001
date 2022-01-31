@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spamfilter.console", "spamf
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spamfilter.Interfaces", "spamfilter.Interfaces\spamfilter.Interfaces.csproj", "{DF051930-B53D-477D-8564-1B1AF32CA838}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spamfilter.Infrastructure", "spamfilter.Infrastructure\spamfilter.Infrastructure.csproj", "{D8A40BBD-6D38-454F-A787-AC0961FD113F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{DF051930-B53D-477D-8564-1B1AF32CA838}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF051930-B53D-477D-8564-1B1AF32CA838}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF051930-B53D-477D-8564-1B1AF32CA838}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8A40BBD-6D38-454F-A787-AC0961FD113F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8A40BBD-6D38-454F-A787-AC0961FD113F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8A40BBD-6D38-454F-A787-AC0961FD113F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8A40BBD-6D38-454F-A787-AC0961FD113F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

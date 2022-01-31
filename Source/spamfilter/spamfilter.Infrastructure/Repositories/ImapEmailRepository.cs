@@ -1,12 +1,12 @@
-using spamfilter.Interfaces;
-using MailKit.Net.Imap;
 using MailKit;
+using MailKit.Net.Imap;
 using MailKit.Search;
 using MimeKit;
 using spamfilter.BL.Entities;
+using spamfilter.Interfaces;
 using spamfilter.Interfaces.Environment;
 
-namespace spamfilter.BL.Repositories;
+namespace spamfilter.Infrastructure.Repositories;
 
 /// <summary>
 /// Imap client

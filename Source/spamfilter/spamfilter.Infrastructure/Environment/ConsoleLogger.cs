@@ -1,6 +1,6 @@
 using spamfilter.Interfaces.Environment;
 
-namespace spamfilter.BL.Logging;
+namespace spamfilter.Infrastructure.Environment;
 
 public class ConsoleLogger : ILogger
 {
@@ -14,21 +14,5 @@ public class ConsoleLogger : ILogger
     public void Log(string message)
     {
         Console.WriteLine($"  - [{DateTime.Now.ToString("dd.MM.yyyy HH:mm:ss")} {_origin}] {message}");
-    }
-}
-
-public class NoLogger : ILogger
-{
-    public void Log(string message)
-    {
-        // do nothing
-    }
-}
-
-public class NoConfiguration : IConfiguration
-{
-    public string GetConfigurationValue(string name)
-    {
-        return "";
     }
 }
