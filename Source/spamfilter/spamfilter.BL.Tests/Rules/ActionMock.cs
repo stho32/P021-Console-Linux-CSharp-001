@@ -11,7 +11,10 @@ public class ActionMock : IAction
         Email = email;
     }
 
+    public bool HasBeenExecuted { get; private set; } = false;
+
     public void Execute(IEmailRepository emailRepository)
     {
+        HasBeenExecuted = true;
     }
 }
