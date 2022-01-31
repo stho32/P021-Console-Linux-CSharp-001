@@ -19,7 +19,7 @@ public class RuleTests
             {
                 new DetectorMock(false)
             },
-            new EnvironmentFactory(),
+            EnvironmentFactory.NoEnvironment(),
             new ActionFactoryMock()
         );
 

@@ -3,10 +3,14 @@ using spamfilter.BL.Logging;
 using spamfilter.BL.Repositories;
 using spamfilter.BL.Rules;
 
-var environment = new EnvironmentFactory();
-var server = environment.GetConfigurationValue("Server");
-var username = environment.GetConfigurationValue("Username");
-var password = environment.GetConfigurationValue("Password");
+var environment = new EnvironmentFactory(
+    new ConsoleLogger("Main"),
+    new ConsoleConfiguration()
+    );
+
+var server = environment.GetConfiguration().GetConfigurationValue("Server");
+var username = environment.GetConfiguration().GetConfigurationValue("Username");
+var password = environment.GetConfiguration().GetConfigurationValue("Password");
 
 var emailRepository = new ImapEmailRepository(server??"", username??"", password??"", environment);
 

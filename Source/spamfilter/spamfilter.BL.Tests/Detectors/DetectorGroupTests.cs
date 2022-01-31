@@ -17,7 +17,7 @@ public class DetectorGroupTests
             {
                 new DetectorMock(false)
             },
-            new EnvironmentFactory()
+            EnvironmentFactory.NoEnvironment()
         );
 
         var results = detectorGroup.Filter(
@@ -38,7 +38,7 @@ public class DetectorGroupTests
             {
                 new DetectorMock(true)
             },
-            new EnvironmentFactory()
+            EnvironmentFactory.NoEnvironment()
         );
 
         var results = detectorGroup.Filter(
