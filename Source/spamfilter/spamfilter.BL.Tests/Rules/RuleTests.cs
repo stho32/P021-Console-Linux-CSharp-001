@@ -3,6 +3,7 @@ using spamfilter.BL.Entities;
 using spamfilter.BL.Logging;
 using spamfilter.BL.Rules;
 using spamfilter.BL.Tests.Detectors;
+using spamfilter.BL.Tests.Mocks;
 using spamfilter.Interfaces;
 using Xunit;
 

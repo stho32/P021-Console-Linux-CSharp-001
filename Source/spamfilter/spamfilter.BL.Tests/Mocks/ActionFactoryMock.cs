@@ -1,6 +1,6 @@
 using spamfilter.Interfaces;
 
-namespace spamfilter.BL.Tests.Rules;
+namespace spamfilter.BL.Tests.Mocks;
 
 public class ActionFactoryMock : IActionFactory
 {

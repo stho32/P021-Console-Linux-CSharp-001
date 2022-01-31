@@ -1,6 +1,7 @@
 using spamfilter.BL.Tests.Rules;
 using spamfilter.Interfaces;
 using spamfilter.BL.ExtensionMethods;
+using spamfilter.BL.Tests.Mocks;
 using Xunit;
 
 namespace spamfilter.BL.Tests.ExtensionMethods;

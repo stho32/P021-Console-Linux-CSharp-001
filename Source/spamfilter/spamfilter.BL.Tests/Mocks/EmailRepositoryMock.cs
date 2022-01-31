@@ -1,6 +1,6 @@
 using spamfilter.Interfaces;
 
-namespace spamfilter.BL.Tests.ExtensionMethods;
+namespace spamfilter.BL.Tests.Mocks;
 
 public class EmailRepositoryMock : IEmailRepository
 {
@@ -11,5 +11,8 @@ public class EmailRepositoryMock : IEmailRepository
 
     public void MoveMailsToFolder(IEmail[] mails, string folderName)
     {
+        MoveMailsToFolderHasBeenCalled = true;
     }
+
+    public bool MoveMailsToFolderHasBeenCalled { get; private set; }
 }
