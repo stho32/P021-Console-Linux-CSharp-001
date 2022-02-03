@@ -99,7 +99,8 @@ public class ImapEmailRepository : IEmailRepository
                     senderAddress,
                     uniqueId,
                     message.Subject,
-                    message.TextBody));
+                    message.TextBody,
+                    message.HtmlBody));
             }
 
             client.Disconnect(true);

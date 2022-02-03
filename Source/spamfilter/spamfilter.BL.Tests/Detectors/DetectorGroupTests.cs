@@ -25,8 +25,8 @@ public class DetectorGroupTests
         var results = detectorGroup.Filter(
             new IEmail[]
             {
-                new Email("Sender", "Sender", UniqueId.Invalid, "Subject", "Body"),
-                new Email("Sender", "Sender", UniqueId.Invalid, "Subject", "Body")
+                new Email("Sender", "Sender", UniqueId.Invalid, "Subject", "Body", ""),
+                new Email("Sender", "Sender", UniqueId.Invalid, "Subject", "Body", "")
             });
         
         Assert.Equal(2, results.Length);
@@ -46,8 +46,8 @@ public class DetectorGroupTests
         var results = detectorGroup.Filter(
             new IEmail[]
             {
-                new Email("Sender", "Sender", UniqueId.Invalid, "Subject", "Body"),
-                new Email("Sender", "Sender", UniqueId.Invalid, "Subject", "Body")
+                new Email("Sender", "Sender", UniqueId.Invalid, "Subject", "Body", ""),
+                new Email("Sender", "Sender", UniqueId.Invalid, "Subject", "Body", "")
             });
         
         Assert.Empty(results);

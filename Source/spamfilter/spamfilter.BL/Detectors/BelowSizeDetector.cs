@@ -16,7 +16,7 @@ public class BelowSizeDetector : IDetector
     
     public IIsMatchOpinion[] GetOpinionsOn(IEmail email)
     {
-        if (email.Body.Length < _detectBodySizeBelowNBytes)
+        if (email.TextBody.Length < _detectBodySizeBelowNBytes)
         {
             return new IIsMatchOpinion[]
             {

@@ -41,7 +41,7 @@ public class ContentBasedDetector : IDetector
 
         if (_checkBody)
         {
-            if (_textSearchHelper.ContainsOneOfTheseWords(email.Body, _words))
+            if (_textSearchHelper.ContainsOneOfTheseWords(email.TextBody, _words))
             {
                 result.Add(
                     new IsMatchOpinion(100,

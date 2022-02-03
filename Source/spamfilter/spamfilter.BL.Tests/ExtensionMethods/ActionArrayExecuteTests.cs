@@ -1,3 +1,4 @@
+using spamfilter.BL.Entities;
 using spamfilter.BL.Tests.Rules;
 using spamfilter.Interfaces;
 using spamfilter.BL.ExtensionMethods;
@@ -14,8 +15,8 @@ public class ActionArrayExecuteTests
     {
         var actions = new IAction[]
         {
-            new ActionMock(null),
-            new ActionMock(null)
+            new ActionMock(Email.Empty()),
+            new ActionMock(Email.Empty())
         };
 
         actions.Execute(new EmailRepositoryMock());

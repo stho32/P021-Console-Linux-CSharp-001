@@ -18,7 +18,8 @@ public class DetectionResultTests
                 "",
                 UniqueId.Invalid,
                 "Subject",
-                "Body"),
+                "Body",
+                ""),
             Array.Empty<IIsMatchOpinion>());
         
         Assert.Equal("Hello world", detectionResult.Email.SenderName);
@@ -35,7 +36,8 @@ public class DetectionResultTests
                 "",
                 UniqueId.Invalid,
                 "Subject",
-                "Body"),
+                "Body",
+                ""),
             new IIsMatchOpinion[]
             {
                 new IsMatchOpinion(10, "I am uncertain", "Someone", true),

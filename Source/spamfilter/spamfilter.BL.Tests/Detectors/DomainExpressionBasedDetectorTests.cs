@@ -22,6 +22,7 @@ public class DomainExpressionBasedDetectorTests
             "brian@amazon.de",
             UniqueId.Invalid,
             "",
+            "",
             ""
         );
 
@@ -37,6 +38,7 @@ public class DomainExpressionBasedDetectorTests
             "",
             "brian@amazon.de",
             UniqueId.Invalid,
+            "",
             "",
             ""
         );
@@ -54,6 +56,7 @@ public class DomainExpressionBasedDetectorTests
             "",
             "brian@amazon.de",
             UniqueId.Invalid,
+            "",
             "",
             ""
         );

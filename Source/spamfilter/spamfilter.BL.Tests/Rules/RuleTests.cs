@@ -28,8 +28,8 @@ public class RuleTests
         var actions = rule.Execute(
             new IEmail[]
             {
-                new Email("", "", UniqueId.Invalid, "1" , ""),
-                new Email("", "", UniqueId.Invalid, "2" , "")
+                new Email("", "", UniqueId.Invalid, "1" , "", ""),
+                new Email("", "", UniqueId.Invalid, "2" , "", "")
             }
         );
         

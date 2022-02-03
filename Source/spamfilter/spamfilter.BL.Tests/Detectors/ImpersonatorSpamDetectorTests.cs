@@ -28,7 +28,8 @@ public class ImpersonatorSpamDetectorTests
             "amazon@amazon.de",
             UniqueId.Invalid,
             "Your orders",
-            "Some stuff");
+            "Some stuff",
+            "");
         
         Assert.Empty(SpamDetector().GetOpinionsOn(mail));
     }
@@ -41,7 +42,8 @@ public class ImpersonatorSpamDetectorTests
             "amazon@amazon.com",
             UniqueId.Invalid,
             "Your orders",
-            "Some stuff");
+            "Some stuff", 
+            "");
         
         Assert.Empty(SpamDetector().GetOpinionsOn(mail));
     }
@@ -54,7 +56,8 @@ public class ImpersonatorSpamDetectorTests
             "amazon@someimpersonator.com",
             UniqueId.Invalid, 
             "Your orders",
-            "some stuff");
+            "some stuff",
+            "");
 
         var result = SpamDetector().GetOpinionsOn(mail);
         Assert.Single(result);

@@ -22,6 +22,7 @@ public class EmailEndsWithBasedDetectorTests
             "brian@amazon.de",
             UniqueId.Invalid,
             "",
+            "",
             ""
         );
 
@@ -37,6 +38,7 @@ public class EmailEndsWithBasedDetectorTests
             "",
             "brian@amazon.de",
             UniqueId.Invalid,
+            "",
             "",
             ""
         );

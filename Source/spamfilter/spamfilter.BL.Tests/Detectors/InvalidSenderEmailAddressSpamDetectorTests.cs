@@ -26,6 +26,7 @@ public class InvalidSenderEmailAddressSpamDetectorTests
             "amazon@amazon.de",
             UniqueId.Invalid,
             "Your orders",
+            "",
             "");
         
         Assert.Empty(SpamDetector().GetOpinionsOn(mail));
@@ -39,6 +40,7 @@ public class InvalidSenderEmailAddressSpamDetectorTests
             "Not-an-email",
             UniqueId.Invalid,
             "Your orders",
+            "",
             "");
         
         Assert.NotEmpty(SpamDetector().GetOpinionsOn(mail));

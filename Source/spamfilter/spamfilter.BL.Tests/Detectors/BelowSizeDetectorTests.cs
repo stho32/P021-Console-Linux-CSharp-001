@@ -22,7 +22,8 @@ public class BelowSizeDetectorTests
             "",
             UniqueId.Invalid,
             "This is a subject",
-            "This body has a size below 1000 bytes."
+            "This body has a size below 1000 bytes.",
+            ""
         );
 
         var detector = BelowSizeDetector(1000);
@@ -38,7 +39,8 @@ public class BelowSizeDetectorTests
             "",
             UniqueId.Invalid,
             "This is a subject",
-            "This body is bigger than 20 bytes."
+            "This body is bigger than 20 bytes.",
+            ""
         );
 
         var detector = BelowSizeDetector(20);

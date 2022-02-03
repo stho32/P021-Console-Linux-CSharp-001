@@ -27,6 +27,7 @@ public class ContentBasedDetectorTests
             "",
             UniqueId.Invalid,
             "Hello",
+            "",
             ""
         );
 
@@ -43,6 +44,7 @@ public class ContentBasedDetectorTests
             "",
             UniqueId.Invalid,
             "------",
+            "",
             ""
         );
 
@@ -59,7 +61,8 @@ public class ContentBasedDetectorTests
             "",
             UniqueId.Invalid,
             "Here is some other text",
-            "Hello"
+            "Hello",
+            ""
         );
 
         var detector = Detector(true, false);
@@ -75,7 +78,8 @@ public class ContentBasedDetectorTests
             "",
             UniqueId.Invalid,
             "Hello",
-            "Some other text"
+            "Some other text",
+            ""
         );
 
         var detector = Detector(false, true);
@@ -91,7 +95,8 @@ public class ContentBasedDetectorTests
             "",
             UniqueId.Invalid,
             "Some other Text",
-            "Hello"
+            "Hello",
+            ""
         );
 
         var detector = Detector(false, true);
