@@ -1,6 +1,10 @@
 using spamfilter.BL.Detectors;
 using spamfilter.Interfaces;
+using spamfilter.Interfaces.Actions;
+using spamfilter.Interfaces.Detectors;
+using spamfilter.Interfaces.Entities;
 using spamfilter.Interfaces.Environment;
+using spamfilter.Interfaces.Rules;
 
 namespace spamfilter.BL.Rules;
 

@@ -3,6 +3,7 @@ using spamfilter.BL.Detectors;
 using spamfilter.BL.Entities;
 using spamfilter.BL.Helpers;
 using spamfilter.Interfaces;
+using spamfilter.Interfaces.Detectors;
 using Xunit;
 
 namespace spamfilter.BL.Tests.Detectors;

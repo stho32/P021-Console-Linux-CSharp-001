@@ -4,7 +4,9 @@ using MailKit.Search;
 using MimeKit;
 using spamfilter.BL.Entities;
 using spamfilter.Interfaces;
+using spamfilter.Interfaces.Entities;
 using spamfilter.Interfaces.Environment;
+using spamfilter.Interfaces.Repositories;
 
 namespace spamfilter.Infrastructure.Repositories;
 

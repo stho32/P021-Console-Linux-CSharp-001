@@ -1,6 +1,6 @@
 using MailKit;
 
-namespace spamfilter.Interfaces;
+namespace spamfilter.Interfaces.Entities;
 
 /// <summary>
 /// This interface contains all necessary information about the mails that we need to operate on

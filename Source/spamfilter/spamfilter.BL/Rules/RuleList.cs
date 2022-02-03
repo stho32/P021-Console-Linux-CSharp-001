@@ -1,4 +1,7 @@
 using spamfilter.Interfaces;
+using spamfilter.Interfaces.Actions;
+using spamfilter.Interfaces.Entities;
+using spamfilter.Interfaces.Rules;
 
 namespace spamfilter.BL.Rules;
 

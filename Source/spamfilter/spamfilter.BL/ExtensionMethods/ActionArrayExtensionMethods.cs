@@ -1,4 +1,6 @@
 using spamfilter.Interfaces;
+using spamfilter.Interfaces.Actions;
+using spamfilter.Interfaces.Repositories;
 
 namespace spamfilter.BL.ExtensionMethods;
 

@@ -1,4 +1,4 @@
-namespace spamfilter.Interfaces;
+namespace spamfilter.Interfaces.Rules;
 
 public interface IRuleFactory
 {

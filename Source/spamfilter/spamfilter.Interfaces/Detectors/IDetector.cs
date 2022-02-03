@@ -1,4 +1,6 @@
-namespace spamfilter.Interfaces;
+using spamfilter.Interfaces.Entities;
+
+namespace spamfilter.Interfaces.Detectors;
 
 /// <summary>
 /// A spam-detector collects several opinions about an email

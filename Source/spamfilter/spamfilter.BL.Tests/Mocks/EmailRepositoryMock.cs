@@ -1,4 +1,6 @@
 using spamfilter.Interfaces;
+using spamfilter.Interfaces.Entities;
+using spamfilter.Interfaces.Repositories;
 
 namespace spamfilter.BL.Tests.Mocks;
 

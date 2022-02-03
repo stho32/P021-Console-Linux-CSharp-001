@@ -1,4 +1,4 @@
-namespace spamfilter.Interfaces;
+namespace spamfilter.Interfaces.Entities;
 
 /// <summary>
 /// Is this message spam or not?

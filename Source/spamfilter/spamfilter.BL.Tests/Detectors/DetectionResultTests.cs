@@ -2,6 +2,7 @@ using MailKit;
 using spamfilter.BL.Detectors;
 using spamfilter.BL.Entities;
 using spamfilter.Interfaces;
+using spamfilter.Interfaces.Entities;
 using Xunit;
 
 namespace spamfilter.BL.Tests.Detectors;

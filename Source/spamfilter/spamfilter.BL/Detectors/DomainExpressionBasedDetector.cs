@@ -1,6 +1,8 @@
 using System.Text.RegularExpressions;
 using spamfilter.BL.Entities;
 using spamfilter.Interfaces;
+using spamfilter.Interfaces.Detectors;
+using spamfilter.Interfaces.Entities;
 
 namespace spamfilter.BL.Detectors;
 
