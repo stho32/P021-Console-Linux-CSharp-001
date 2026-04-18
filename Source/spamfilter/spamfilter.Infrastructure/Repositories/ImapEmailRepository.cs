@@ -39,11 +39,11 @@ public class ImapEmailRepository : IEmailRepository
             client.Connect (_server, 993, true);
             client.Authenticate (_username, _password);
 
-            var inbox = client.Inbox;
+            var inbox = client.Inbox!;
             inbox.Open (FolderAccess.ReadOnly);
-        
+
             IMailFolder? matchFolder = null;
-            foreach (var folder in client.Inbox.GetSubfolders (false)) {
+            foreach (var folder in inbox.GetSubfolders (false)) {
                 if (folder.Name == folderName)
                 {
                     matchFolder = folder;
@@ -80,9 +80,9 @@ public class ImapEmailRepository : IEmailRepository
             client.Connect(_server, 993, true);
             client.Authenticate(_username, _password);
 
-            var inbox = client.Inbox;
-            client.Inbox.Open(FolderAccess.ReadOnly);
-            var uniqueIds = client.Inbox.Search(SearchQuery.All);
+            var inbox = client.Inbox!;
+            inbox.Open(FolderAccess.ReadOnly);
+            var uniqueIds = inbox.Search(SearchQuery.All);
 
             var result = new List<IEmail>();
 
@@ -93,14 +93,14 @@ public class ImapEmailRepository : IEmailRepository
                 var senderAddress = string.Join(";", message.From.Select(x => (x as MailboxAddress)?.Address));
 
                 logger.Log($"Receiving message {result.Count+1} / {uniqueIds.Count} ...");
-                
+
                 result.Add(new Email(
                     senderNames,
                     senderAddress,
                     uniqueId,
-                    message.Subject,
-                    message.TextBody,
-                    message.HtmlBody));
+                    message.Subject ?? string.Empty,
+                    message.TextBody ?? string.Empty,
+                    message.HtmlBody ?? string.Empty));
             }
 
             client.Disconnect(true);
